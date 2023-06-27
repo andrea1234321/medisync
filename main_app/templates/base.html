@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <title>Medisync</title>
+  {% block head %}
+  {% endblock %}
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="">Medications</a></li>
+        <li><a href="">New Medication</a></li>
+        <li><a href="">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    {% block content %}
+    {% endblock %} 
+  </main>
+</body>
+</html>

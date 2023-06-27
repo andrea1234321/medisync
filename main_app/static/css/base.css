@@ -1,0 +1,19 @@
+body, html{
+  margin: 0;
+}
+nav{
+  background-color: rgb(62, 62, 62);
+  padding: 10px;
+}
+nav > ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: right;
+}
+a, a:visited{
+  text-decoration: none;
+  margin: 10px;
+  color: white;
+}
