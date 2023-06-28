@@ -1,8 +1,9 @@
 body, html{
   margin: 0;
+  background-color: rgb(244, 238, 237);
 }
 nav{
-  background-color: rgb(62, 62, 62);
+  background-color: rgb(153, 155, 132);
   padding: 10px;
 }
 nav > ul{
@@ -15,5 +16,5 @@ nav > ul{
 a, a:visited{
   text-decoration: none;
   margin: 10px;
-  color: white;
+  color: rgb(0, 0, 0);
 }
