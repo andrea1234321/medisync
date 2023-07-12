@@ -7,7 +7,7 @@
 
 {% block content %}
 
-<h1>Medications</h1>
+<h1 class='med-heading'>Medications</h1>
 <table class='medication-table'>
   <thead>
     <tr class='heading'>
@@ -23,7 +23,7 @@
       <td>{{ medication.name }}</td>
         <td>{{ medication.dose }}{{ medication.unitOfMeasurement }}</td>
         <td>{{ medication.time }}</td>
-        <td><button>More info</button></td>
+        <td><button class='btn'>More info</button></td>
       </tr>
       {% endfor %}
     </tbody>

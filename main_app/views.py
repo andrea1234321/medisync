@@ -13,4 +13,4 @@ def index(request):
 class MedicationCreate(CreateView):
   model= Medication
   fields= '__all__'
-  success_url = '/'
+  success_url = '/medications'
