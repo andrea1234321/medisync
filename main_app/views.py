@@ -6,6 +6,10 @@ from .models import Medication
 def home(request):
   return render(request, 'home.html')
 
+def index(request):
+  medications= Medication.objects.all()
+  return render(request, 'medications/index.html', {'medications': medications})
+
 class MedicationCreate(CreateView):
   model= Medication
   fields= '__all__'

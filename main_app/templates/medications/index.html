@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Medications</h1>
+{% for medication in medications %}
+  <table>
+    <tr>
+      <th>Medication</th>
+      <th>Dose</th>
+      <th>Frequency</th>
+    </tr>
+    <tr>
+      <td>{{ medication.name }}</td>
+      <td>{{ medication.dose }}{{ medication.unitOfMeasurement }}</td>
+      <td>{{ medication.time }}</td>
+    </tr>
+  </table>
+{% endfor %}
+{% endblock %}
