@@ -1,0 +1,20 @@
+.medication-table{
+  margin: 0 auto;
+  width: 90%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.heading{
+  background-color: rgb(153, 155, 132);
+  border-bottom: 1px solid black;
+}
+.heading> th{
+  padding: 10px;
+  text-align: left;
+}
+.rows> td{
+  padding: 5px 10px;
+}
+tbody tr:nth-child(even){
+  background-color: rgb(206, 206, 197);
+} 

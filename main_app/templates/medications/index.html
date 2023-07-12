@@ -1,20 +1,31 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/medications/index.css' %}">
+{% endblock  %}
 
 {% block content %}
 
 <h1>Medications</h1>
-{% for medication in medications %}
-  <table>
-    <tr>
+<table class='medication-table'>
+  <thead>
+    <tr class='heading'>
       <th>Medication</th>
       <th>Dose</th>
       <th>Frequency</th>
+      <th></th>
     </tr>
-    <tr>
+  </thead>
+  <tbody>
+    {% for medication in medications %}
+    <tr class='rows'>
       <td>{{ medication.name }}</td>
-      <td>{{ medication.dose }}{{ medication.unitOfMeasurement }}</td>
-      <td>{{ medication.time }}</td>
-    </tr>
+        <td>{{ medication.dose }}{{ medication.unitOfMeasurement }}</td>
+        <td>{{ medication.time }}</td>
+        <td><button>More info</button></td>
+      </tr>
+      {% endfor %}
+    </tbody>
   </table>
-{% endfor %}
 {% endblock %}
