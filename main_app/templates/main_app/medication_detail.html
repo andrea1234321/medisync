@@ -1,11 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<h1>{{medication.name}}</h1>
-<p>{{ medication.dose }}{{ medication.unitOfMeasurement }}</p>
-<p>{{ medication.time }}</p>
-<p>{{medication.reason}}</p>
-<p>{{medication.notes}}</p>
+<div>
+  <h1>{{medication.name}}</h1>
+  <p>{{ medication.dose }}{{ medication.unitOfMeasurement }}</p>
+  <p>{{ medication.time }}</p>
+  <p>{{medication.reason}}</p>
+  <p>{{medication.notes}}</p>
+  <a href="{% url 'medication-update' medication.id%}">
+    <button>Edit</button>
+  </a>
+  <button>Delete</button>
+</div>
 
 {% endblock %}

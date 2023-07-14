@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic import DetailView
 from .models import Medication
 
@@ -18,3 +18,8 @@ class MedicationCreate(CreateView):
 
 class MedicationDetail(DetailView):
   queryset= Medication.objects.all()
+
+class MedicationUpdate(UpdateView):
+  model= Medication
+  fields= '__all__'
+  success_url = '/medications'
