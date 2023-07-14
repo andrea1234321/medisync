@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic.edit import CreateView
+from django.views.generic import DetailView
 from .models import Medication
 
 # Define the home view
@@ -14,3 +15,6 @@ class MedicationCreate(CreateView):
   model= Medication
   fields= '__all__'
   success_url = '/medications'
+
+class MedicationDetail(DetailView):
+  queryset= Medication.objects.all()

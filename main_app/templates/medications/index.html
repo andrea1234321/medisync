@@ -23,7 +23,11 @@
       <td>{{ medication.name }}</td>
         <td>{{ medication.dose }}{{ medication.unitOfMeasurement }}</td>
         <td>{{ medication.time }}</td>
-        <td><button class='btn'>More info</button></td>
+        <td>
+          <a href="{% url 'medication-detail' medication.id%}">
+            <button class='btn'>More info</button>
+          </a>
+        </td>
       </tr>
       {% endfor %}
     </tbody>
