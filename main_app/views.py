@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import DetailView
 from .models import Medication
 
@@ -23,3 +23,7 @@ class MedicationUpdate(UpdateView):
   model= Medication
   fields= '__all__'
   success_url = '/medications'
+
+class MedicationDelete(DeleteView):
+  model = Medication
+  success_url= '/medications'

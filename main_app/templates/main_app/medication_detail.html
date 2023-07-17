@@ -8,9 +8,11 @@
   <p>{{medication.reason}}</p>
   <p>{{medication.notes}}</p>
   <a href="{% url 'medication-update' medication.id%}">
-    <button>Edit</button>
+    <button class='submit'>Edit</button>
   </a>
-  <button>Delete</button>
+  <a href="{% url 'medication-delete' medication.id%}">
+    <button class='submit'>Delete</button>
+  </a>
 </div>
 
 {% endblock %}

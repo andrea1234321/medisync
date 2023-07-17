@@ -2,16 +2,19 @@
 
 {% load static %}
 {% block head %}
-<link rel="stylesheet" href="{% static 'css/form.css' %}">
+  <link rel="stylesheet" href="{% static 'css/form.css' %}">
 {% endblock %}
 {% block content %}
-
-<h1>Add medication</h1>
-<form action="" method='post'>
-  {% csrf_token %}
-  <table>
-    {{ form.as_table }}
-  </table>
-  <button type='submit' class='submit'>Submit</button>
-</form>
+{% if medication %}
+  <h1>Edit Medication</h1>
+{% else %}
+  <h1>Add medication</h1>
+{% endif %}
+  <form action="" method='post'>
+    {% csrf_token %}
+    <table>
+      {{ form.as_table }}
+    </table>
+    <button type='submit' class='submit'>Submit</button>
+  </form>
 {% endblock %}
